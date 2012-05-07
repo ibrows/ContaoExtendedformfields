@@ -1,0 +1,7 @@
+<div class="<?php echo $this->class; ?>">
+    <?php if($this->type != 'image'): ?>
+        <input type="<?php echo $this->type; ?>" id="<?php echo $this->id; ?>" class="<?php echo $this->class; ?>" <?php echo $this->attributes; ?> />
+    <?php else: ?>
+        <input type="<?php echo $this->type; ?>" src="<?php echo $this->image; ?>" id="<?php echo $this->id; ?>" class="<?php echo $this->class; ?>" title="<?php echo $this->title; ?>" alt="<?php echo $this->alt; ?>" <?php echo $this->attributes; ?> />
+    <?php endif; ?>
+</div>

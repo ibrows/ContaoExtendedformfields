@@ -1,0 +1,4 @@
+<div class="area <?php echo $this->class; ?>">
+    <label for="<?php echo $this->id; ?>" class="<?php echo $this->class; ?>"><?php echo $this->label; ?></label>
+    <span class="textarea <?php echo $this->class; ?>"><textarea id="<?php echo $this->id; ?>" name="<?php echo $this->name; ?>" class="<?php echo $this->class; ?>" cols="<?php echo $this->intCols; ?>" rows="<?php echo $this->intRows; ?>" <?php echo $this->attributes; ?>><?php echo $this->value; ?></textarea></span>
+</div>

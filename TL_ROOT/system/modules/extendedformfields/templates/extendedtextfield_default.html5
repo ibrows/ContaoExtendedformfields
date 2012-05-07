@@ -1,0 +1,4 @@
+<div class="area <?php echo $this->class; ?>">
+    <label for="<?php echo $this->id; ?>" class="<?php echo $this->class; ?>"><?php echo $this->label; ?></label>
+    <input id="<?php echo $this->id; ?>" name="<?php echo $this->name; ?>" class="text txt <?php echo $this->class; ?>" type="text" value="<?php echo $this->value; ?>" <?php echo $this->attributes; ?>>
+</div>

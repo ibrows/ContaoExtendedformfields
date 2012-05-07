@@ -1,0 +1,15 @@
+<?php $blnHasGroups = false; ?>
+<div class="area <?php echo $this->class; ?>">
+    <label for="<?php echo $this->id; ?>" class="<?php echo $this->class; ?>"><?php echo $this->label; ?></label>
+    <select id="<?php echo $this->id; ?>" name="<?php echo $this->name; ?>" class="select <?php echo $this->class; ?>">
+        <?php foreach($this->options as $arrOption): ?>
+            <?php if(!$arrOption['group']): ?>
+                <option value="<?php echo $arrOption['value']; ?>"<?php echo $arrOption['selected']; ?>><?php echo $arrOption['label']; ?></option>
+            <?php else: ?>
+                <?php if($blnHasGroups): ?></optgroup><?php endif; ?>
+                <optgroup label="<?php echo $arrOption['label']; ?>">
+                <?php $blnHasGroups = true; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </select>
+</div>
