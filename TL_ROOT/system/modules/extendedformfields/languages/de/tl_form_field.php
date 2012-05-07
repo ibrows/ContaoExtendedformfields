@@ -21,6 +21,9 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
+ * @copyright  iBROWS GmbH 2012
+ * @author     Dominik Zogg <dominik.zogg@ibrows.ch>
+ * @license    LGPLv3
  */
 
 /**

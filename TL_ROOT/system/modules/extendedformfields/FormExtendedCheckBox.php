@@ -21,11 +21,9 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Leo Feyer 2005-2012
- * @author     Leo Feyer <http://www.contao.org>
- * @package    Frontend
- * @license    LGPL
- * @filesource
+ * @copyright  iBROWS GmbH 2012
+ * @author     Dominik Zogg <dominik.zogg@ibrows.ch>
+ * @license    LGPLv3
  */
 
 class FormExtendedCheckBox extends FormCheckBox
