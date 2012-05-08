@@ -1,13 +1,6 @@
 <?php foreach($this->options as $intKey => $arrOption): ?>
     <div class="check-area">
-        <input
-            type="checkbox"
-            id="<?php echo $arrOption['field']['id']; ?>"
-            name="<?php echo $arrOption['field']['name']; ?>"
-            value="<?php echo $arrOption['field']['value']; ?>"
-            <?php echo $arrOption['field']['checked']; ?>
-            <?php echo $arrOption['field']['attributes']; ?>
-        />
+        <input type="checkbox" id="<?php echo $arrOption['field']['id']; ?>" name="<?php echo $arrOption['field']['name']; ?>" value="<?php echo $arrOption['field']['value']; ?>" <?php echo $arrOption['field']['checked']; ?> <?php echo $arrOption['field']['attributes']; ?>>
         <label id="<?php echo $arrOption['label']['id']; ?>" for="<?php echo $arrOption['label']['for']; ?>"><?php echo $arrOption['label']['label']; ?></label>
     </div>
 <?php endforeach; ?>
