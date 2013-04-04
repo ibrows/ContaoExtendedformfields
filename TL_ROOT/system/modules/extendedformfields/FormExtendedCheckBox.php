@@ -50,8 +50,11 @@ class FormExtendedCheckBox extends FormCheckBox
         // get template
         $strTemplate = $this->extendedcheckboxTpl ? $this->extendedcheckboxTpl : 'extendedcheckbox_default';
 
+        // add _ to the suffix
+        $strSuffix = $strSuffix ? '_' . $strSuffix : '';
+
         // options
-        $arrOptions = $this->_prepareOptions($this->arrOptions);
+        $arrOptions = $this->_prepareOptions($this->arrOptions, $strSuffix);
 
         // template
         $objTemplate = new FrontendTemplate($strTemplate);
@@ -59,11 +62,17 @@ class FormExtendedCheckBox extends FormCheckBox
         // add values to the template
         $objTemplate->id = $this->strId;
         $objTemplate->class = $this->strClass;
+        $objTemplate->nameAttribute = $this->strName . $strSuffix;
         $objTemplate->label = $this->label;
         $objTemplate->sublabel = $this->sublabel;
         $objTemplate->required = $this->required;
         $objTemplate->options = $arrOptions;
         $objTemplate->optionscount = count($arrOptions);
+
+        if($this->strError)
+        {
+            $objTemplate->error = $this->strError;
+        }
 
         // return rendered widget
         return $objTemplate->parse();
@@ -77,9 +86,6 @@ class FormExtendedCheckBox extends FormCheckBox
     {
         // empty option array
         $arrOptions = array();
-
-        // add _ to the suffix
-        $strSuffix = !empty($strSuffix) ? '_' . $strSuffix : $strSuffix;
 
         // foreach option add prepared to the option array
         foreach($arrRawOptions as $intKey => $arrOption)
