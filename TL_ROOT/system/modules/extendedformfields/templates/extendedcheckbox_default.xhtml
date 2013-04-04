@@ -1,6 +1,25 @@
-<?php foreach($this->options as $intKey => $arrOption): ?>
-    <div class="check-area">
-        <input type="checkbox" id="<?php echo $arrOption['field']['id']; ?>" name="<?php echo $arrOption['field']['name']; ?>" value="<?php echo $arrOption['field']['value']; ?>" <?php echo $arrOption['field']['checked']; ?> <?php echo $arrOption['field']['attributes']; ?> />
-        <label id="<?php echo $arrOption['label']['id']; ?>" for="<?php echo $arrOption['label']['for']; ?>"><?php echo $arrOption['label']['label']; ?></label>
-    </div>
-<?php endforeach; ?>
+<fieldset id="ctrl_<?php echo $this->id; ?>" class="checkbox_container <?php echo $this->class; ?>">
+	<input type="hidden" name="<?php echo $this->nameAttribute ; ?>" value="">
+	<?php foreach($this->options as $intKey => $arrOption): ?>
+		<span>
+			<input
+				type="checkbox"
+				id="<?php echo $arrOption['field']['id']; ?>"
+				class="checkbox"
+				name="<?php echo $arrOption['field']['name']; ?>"
+				value="<?php echo $arrOption['field']['value']; ?>"
+				<?php echo $arrOption['field']['checked']; ?>
+				<?php echo $arrOption['field']['attributes']; ?>
+			/>
+			<label
+				id="<?php echo $arrOption['label']['id']; ?>"
+				for="<?php echo $arrOption['label']['for']; ?>"
+			>
+				<?php echo $arrOption['label']['label']; ?>
+			</label>
+		</span>
+	<?php endforeach; ?>
+	<?php if($this->error): ?>
+		<?php echo $this->error; ?>
+	<?php endif; ?>
+</fieldset>
