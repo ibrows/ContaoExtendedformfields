@@ -62,7 +62,7 @@ class FormExtendedCheckBox extends FormCheckBox
         // add values to the template
         $objTemplate->id = $this->strId;
         $objTemplate->class = $this->strClass;
-        $objTemplate->nameAttribute = $this->strName . $strSuffix;
+        $objTemplate->nameAttribute = $this->strName . $strSuffix;
         $objTemplate->label = $this->label;
         $objTemplate->sublabel = $this->sublabel;
         $objTemplate->required = $this->required;
