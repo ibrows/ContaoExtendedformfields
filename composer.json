@@ -15,7 +15,7 @@
         "contao/core": "2.11.*"
     },
     "autoload": {
-        "classmap": ["src/"]
+        "classmap": ["./"]
     },
     "extra": {
         "contao": {
