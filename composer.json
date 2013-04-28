@@ -1,0 +1,27 @@
+{
+    "name": "ibrows/contao-extendedformfields",
+    "type": "contao-module",
+    "description": "extend the default form fields, for better themeability",
+    "keywords": ["contao", "form", "theme"],
+    "license": "LGPLv3",
+    "authors": [
+        {
+            "name": "Dominik Zogg",
+            "email": "dominik.zogg@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2",
+        "contao/core": "2.11.*"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "extra": {
+        "contao": {
+            "symlinks": {
+                "system/modules/extendedformfields": "system/modules/extendedformfields"
+            }
+        }
+    }
+}
